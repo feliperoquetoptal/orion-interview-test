@@ -1,9 +1,13 @@
 # Orion Frontend Test Application  
 
-### Setup  
+### Environment Setup  
 ```  
 yarn install  
+```  
+
+### Commands  
+```
 yarn lint  
 yarn test  
 yarn start  
-```  
+```
