@@ -1,0 +1,62 @@
+[
+  {
+    "id": 332,
+    "type": "general",
+    "setup": "Why did the chicken get a penalty?",
+    "punchline": "For fowl play."
+  },
+  {
+    "id": 69,
+    "type": "general",
+    "setup": "I got hit in the head by a soda can, but it didn't hurt that much...",
+    "punchline": "It was a soft drink."
+  },
+  {
+    "id": 116,
+    "type": "general",
+    "setup": "How come a man driving a train got struck by lightning?",
+    "punchline": "He was a good conductor."
+  },
+  {
+    "id": 314,
+    "type": "general",
+    "setup": "Why are ghosts bad liars?",
+    "punchline": "Because you can see right through them!"
+  },
+  {
+    "id": 200,
+    "type": "general",
+    "setup": "What do prisoners use to call each other?",
+    "punchline": "Cell phones."
+  },
+  {
+    "id": 320,
+    "type": "general",
+    "setup": "Why can't a bicycle stand on its own?",
+    "punchline": "It's two-tired."
+  },
+  {
+    "id": 109,
+    "type": "general",
+    "setup": "Do you want a brief explanation of what an acorn is?",
+    "punchline": "In a nutshell, it's an oak tree."
+  },
+  {
+    "id": 38,
+    "type": "general",
+    "setup": "I'm reading a book about anti-gravity...",
+    "punchline": "It's impossible to put down"
+  },
+  {
+    "id": 249,
+    "type": "general",
+    "setup": "What does an angry pepper do?",
+    "punchline": "It gets jalapeño face."
+  },
+  {
+    "id": 73,
+    "type": "programming",
+    "setup": "The punchline often arrives before the set-up.",
+    "punchline": "Do you know the problem with UDP jokes?"
+  }
+]
