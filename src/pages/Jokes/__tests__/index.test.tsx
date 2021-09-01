@@ -7,16 +7,12 @@ import { JOKE_API_URL } from '../../../utils/constants';
 import mockJokes from './jokes.json';
 
 describe('<JokesPage />', () => {
-  const successfulJokesRequest = rest.get(JOKE_API_URL, (_req, res, ctx) => res.once(ctx.json(mockJokes)));
-  const failedJokesRequest = rest.get(JOKE_API_URL, (_req, res, ctx) => res.once((ctx.status(500), ctx.json({ message: 'Error' }))));
-  const server = setupServer();
-  beforeAll(() => server.listen())
-  afterEach(() => server.resetHandlers())
-  afterAll(() => server.close())
   describe('Results', () => {
-    beforeEach(() => {
-      server.use(successfulJokesRequest);
-    });
+    const successfulJokesRequest = rest.get(JOKE_API_URL, (_req, res, ctx) => res(ctx.json(mockJokes)));
+    const server = setupServer(successfulJokesRequest);
+    beforeAll(() => server.listen());
+    beforeEach(() => server.resetHandlers());
+    afterAll(() => server.close());
     it('should render jokes list', async () => {
       render(<JokesPage />);
       expect(screen.getByText('Jokes List')).toBeInTheDocument();
@@ -49,15 +45,4 @@ describe('<JokesPage />', () => {
       expect(screen.queryAllByTestId('joke').length).toEqual(0);
     });
   })
-  describe('Errors', () => {
-    beforeEach(() => {
-      server.use(failedJokesRequest);
-    });
-    it('should render error message', async () => {
-      render(<JokesPage />);
-      expect(screen.getByText('Jokes List')).toBeInTheDocument();
-      await waitFor(() => screen.getByText('Something went wrong :('));
-      expect(screen.getByText('Something went wrong :(')).toBeInTheDocument();
-    });
-  });
 });
